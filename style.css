@@ -1,0 +1,84 @@
+
+/* 
+Usando o seletor universal (*) para remover as margens e os preenchimentos padrões de todos os elementos. 
+Isso é conhecido como *reset* de CSS e ajuda a evitar inconsistências entre navegadores.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui a borda e o preenchimento no cálculo total do tamanho do elemento */
+}
+
+/* Definindo a cor de fundo e a cor do texto do corpo da página */
+body {
+  height: 100vh; /* Define a altura do body para ocupar toda a altura da tela, adaptando-se a diferentes dispositivos */
+  background-color: black; /* Cor de fundo */
+  color: white; /* Cor do texto */
+}
+
+/* Selecionando uma classe com um ponto (.) antes do nome */
+.titulo-destaque {
+  color: #7ED98E; /* Define a cor do texto em destaque */
+}
+
+img {
+  width: 300px;
+  height: 300px; /* Define as dimensões da imagem */
+}
+
+.apresentacao {
+  margin: 10% 15%; /*deixou com 10% de margem vertical(superior e inferior) 15% de margem horizontal(lateral esquerda e direita)*/
+  display: flex; /* Usa o display flex para organizar os elementos dentro da classe .apresentacao em linha */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  justify-content: space-between; /*deu um espaaço entre os textos e as imagens*/
+
+}
+
+.apresentacao__conteudo {  /*essa classe esta na <section>*/
+  width: 593px; /*largura do texto abaixo da H1*/
+  display: flex;
+  flex-direction: column; /*os itens dentro desse contêiner são organizados em uma coluna vertical*/
+  gap: 40px; /*fez o espaçamento entre o H1, paragrafo e botões*/
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); /*fonte importada do google fonts*/
+
+.apresentacao__conteudo__titulo { /*essa classe esta no H1*/
+  font-size: 36px; /*tamanho do H1*/
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap'); /*fonte importada do google fonts*/
+
+.apresentacao__conteudo__texto { /*essa classe esta no paragrafo*/
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.apresentacao__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*estilizando os botões*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap'); /*fonte importada do google fonts*/
+.apresentacao__links__link {
+  background-color: #7ED98E; /*cor do botão*/
+  width: 280px; /*largura do botão*/
+  text-align: center; /*centraliza o texto q vai ficar dentro do botão*/
+  border-radius: 16px; /*arredondamento da borda*/
+  font-size: 24px;
+  font-weight: 600; /*tamanho da fonte importada do google fonts*/
+  padding: 21.5px 0px; /*primeiro valor sempre é o vertical e o segundo horizontar, espaçamento dentro do botão*/
+  text-decoration: none; /*none = nada, nenhum/ tira as linhas que ficam embaixo da escrita no botão, no caso aqui Instagram e Github*/
+  color: black; /*cor da fonte do botão*/
+  font-family: "Montserrat", sans-serif; /*mesma fonte do H1 e paragrafo*/
+
+}
